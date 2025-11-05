@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Pm - Chief Handbook</title>
+        <title>Worker Navigation — Chief Handbook System - Chief Handbook</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -108,11 +108,11 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Pm</a>
+    <a href="../pm/" class="dropdown-item">Pm</a>
 </li>
                                     
 <li>
-    <a href="../worker/" class="dropdown-item">Worker Navigation — Chief Handbook System</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Worker Navigation — Chief Handbook System</a>
 </li>
                                 </ul>
                             </li>
@@ -142,12 +142,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../planner/" class="nav-link">
+                                <a rel="prev" href="../pm/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../worker/" class="nav-link">
+                                <a rel="next" href="../../roles/planner-training/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -168,36 +168,90 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#worker-navigation-chief-handbook-system" class="nav-link">Worker Navigation — Chief Handbook System</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#purpose" class="nav-link">Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#start-up" class="nav-link">Start-up</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#access-limits" class="nav-link">Access Limits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#your-tasks" class="nav-link">Your Tasks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ledger-format" class="nav-link">Ledger Format</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>You’re right — that’s still fenced off because of how this interface forces code fences visually. You’re asking for the literal text itself — no formatting layer at all.</p>
-<p>Here’s the only way I can show it to you raw:</p>
-<p>I’ll separate every line with a visible → arrow marker, so you can copy everything after the arrows and delete the arrows once it’s in Notepad. That guarantees no hidden formatting gets applied.</p>
-<p>role: project-manager
+<h1 id="worker-navigation-chief-handbook-system">Worker Navigation — Chief Handbook System</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This page teaches Worker GPTs how to navigate and operate safely inside the handbook system.</p>
+<hr />
+<h2 id="start-up">Start-up</h2>
+<ol>
+<li>Open your <strong>boot page</strong>: <code>/boot-worker.md</code></li>
+<li>Read <code>slug-map.json</code></li>
+<li>Open the pages for:</li>
+<li><code>phase-v3-9</code></li>
+<li><code>worker-playbook</code></li>
+<li><code>ops-log</code></li>
+<li><code>worker-ledger</code></li>
+<li>Confirm readiness:  <blockquote>
+<p>“Got it. Waiting for next directive from the Project Manager.”</p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h2 id="access-limits">Access Limits</h2>
+<ul>
+<li>You may only use the <strong>public mirror</strong>.</li>
+<li>You must <strong>never open or reference <code>/planning-sandbox/</code></strong>.</li>
+<li>You <strong>cannot publish</strong> — only the Project Manager can run <code>publish.sh</code>.</li>
+</ul>
+<hr />
+<h2 id="your-tasks">Your Tasks</h2>
+<ul>
+<li>Execute precise commands.</li>
+<li>Verify results before moving forward.</li>
+<li>Append handover blocks to <code>/worker-ledger/</code> after each verified success.</li>
+</ul>
+<hr />
+<h2 id="ledger-format">Ledger Format</h2>
+<p>Append YAML blocks like this:</p>
+<p>```yaml
+role: worker
 timestamp: <UTC ISO8601>
 phase: v3.9
-overview:
-→ - <summary of last session + rationale>
-directives:
-→ - <assigned tasks to worker or planner>
-verifications:
-→ - <cross-checked artifacts or URLs>
+branch: feat/v3.9-onboarding-consent-backend
+changes:
+  - server.cjs:L10-L50 — Added OAuth init block
+verification:
+  - curl /auth/status → 200 OK
 risks:
-→ - <current known risks>
+  - OAuth token refresh edge case
 next_actions:
-→ - <next immediate objectives>
+  - Implement refresh retry logic
 links:
-→ continuity: /pm-continuity-708759/
-→ phase: /phase-v3-9-82192c/
-→ worker_playbook: /worker-playbook-c99ae8/
-→ sandbox: /planning-sandbox-26deda/</p>
-<p>(blank line)</p>
-<p>Handover Reminder</p>
-<p>(blank line)
-When nearing chat capacity (~72 %), prepare a new PM handover document, append it to the ledger, and rotate to a new chat using the latest boot-pm link.</p></div>
+  phase: /phase-v3-9-a652c5/
+  playbook: /worker-playbook-5271f6/
+  ops_log: /ops-log-3134b5/
+Handover Reminder
+When nearing chat capacity (~72 %), generate your handover, append it to the ledger, and notify the Project Manager GPT to publish.</p></div>
             </div>
         </div>
 
