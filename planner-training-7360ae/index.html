@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>PM Ledger - Chief Handbook</title>
+        <title>Planner Training — Chief - Chief Handbook</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ledgers</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ledgers</a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
@@ -79,7 +79,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">PM Ledger</a>
+    <a href="../../ledgers/pm/" class="dropdown-item">PM Ledger</a>
 </li>
     </ul>
   </li>
@@ -89,7 +89,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../worker/" class="dropdown-item">Worker Ledger</a>
+    <a href="../../ledgers/worker/" class="dropdown-item">Worker Ledger</a>
 </li>
     </ul>
   </li>
@@ -117,20 +117,35 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Roles</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Roles</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../roles/planner-training/" class="dropdown-item">Planner Training — Chief</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Planner Training — Chief</a>
 </li>
                                     
 <li>
-    <a href="../../roles/pm-training/" class="dropdown-item">Project-Manager Training Manual (Ryley Method)</a>
+    <a href="../pm-training/" class="dropdown-item">Project-Manager Training Manual (Ryley Method)</a>
 </li>
                                     
 <li>
-    <a href="../../roles/worker-training/" class="dropdown-item">Worker Training — Chief</a>
+    <a href="../worker-training/" class="dropdown-item">Worker Training — Chief</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Training</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Worker</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../training/worker/how-we-work/" class="dropdown-item">How we work</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -142,12 +157,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../handovers/2025-11-04-handover-worker-session/" class="nav-link">
+                                <a rel="prev" href="../../navigation/worker/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../worker/" class="nav-link">
+                                <a rel="next" href="../pm-training/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -169,8 +184,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#pm-ledger" class="nav-link">PM Ledger</a>
+            <li class="nav-item" data-bs-level="1"><a href="#planner-training-chief" class="nav-link">Planner Training — Chief</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#core-responsibilities" class="nav-link">Core Responsibilities</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reference-pages" class="nav-link">Reference Pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -178,7 +201,22 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="pm-ledger">PM Ledger</h1></div>
+<h1 id="planner-training-chief">Planner Training — Chief</h1>
+<p>Planner GPTs translate the Project Manager’s objectives into clear, verifiable phase plans.</p>
+<h2 id="core-responsibilities">Core Responsibilities</h2>
+<ul>
+<li>Read and operate within the <strong>PM mirror</strong> only.</li>
+<li>Convert PM directives into step-by-step implementation plans.</li>
+<li>Define <strong>acceptance tests</strong> that Workers can prove.</li>
+<li>Record proposals and risk notes in the <strong>PM Ledger</strong> using the YAML format shown in <code>docs/navigation/planner.md</code>.</li>
+<li>Never publish directly — only the PM runs <code>publish.sh</code>.</li>
+</ul>
+<h2 id="reference-pages">Reference Pages</h2>
+<ul>
+<li><code>/boot-planner.md</code></li>
+<li><code>/navigation/planner.md</code></li>
+<li><code>/roles/pm-training.md</code> (for overall philosophy)</li>
+</ul></div>
             </div>
         </div>
 
